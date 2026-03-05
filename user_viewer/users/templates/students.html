@@ -1,0 +1,16 @@
+{% extends 'index.html' %}
+
+{% block content %}
+<h2> Student List </h2>
+<ul>
+    {% for k, v in msg.items %}
+    <h3> {{k}} </h3>
+    <li> id: {{ v.id }}</li>
+    <li> name: {{v.name}}</li>
+    <li> email: {{v.email}}</li>
+    <li> rol: {{v.rol}} </li>
+    </br>
+    {% endfor %}
+</ul>
+
+{% endblock %}
