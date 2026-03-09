@@ -3,13 +3,12 @@
 {% block content %}
 <h2> Student List </h2>
 <ul>
-    {% for k, v in msg.items %}
-    <h3> {{k}} </h3>
-    <li> id: {{ v.id }}</li>
-    <li> name: {{v.name}}</li>
-    <li> email: {{v.email}}</li>
-    <li> rol: {{v.rol}} </li>
-    <li> mitjana: {{v.mean}}</li>
+    {% for student in Students %}
+    <li> id: {{ student.id }}</li>
+    <li> name: {{student.f_name}}</li>
+    <li> email: {{student.email}}</li>
+    <li> rol: {{student.rol}} </li>
+    <li> mitjana: {{student.mean}}</li>
     </br>
     {% endfor %}
 </ul>

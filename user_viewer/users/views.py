@@ -1,4 +1,18 @@
 from django.shortcuts import render
+from .models import Student, Teacher
+
+def get_students(request):
+    # get all students
+    all_students = Student.objects.all()
+    response = {"Students": all_students}
+    return render(request, "students.html", response)
+
+def get_teachers(request):
+    # get all teachers
+    all_teachers = Teacher.objects.all()
+    print(f"DEBUG: Found {all_teachers.count()} teachers in DB")  # <--- ADD THIS
+    response = {"Teachers": all_teachers}
+    return render(request, "teachers.html", response)
 
 # this method returns student data
 def get_student(request):
