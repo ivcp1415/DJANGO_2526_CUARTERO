@@ -1,0 +1,13 @@
+{% extends 'index.html' %}
+
+{% block content %}
+<h2> Es mostra llistat d'estudiant segons id </h2>
+<ul>
+    <li><b> id </b>: {{ student.id }}</li>
+    <li><b> name </b> : {{student.f_name}}</li>
+    <li><b> email </b>: {{student.email}}</li>
+    <li><b> rol </b>: {{student.rol}} </li>
+    <li><b> mitjana </b>: {{student.mean}}</li>
+</ul>
+
+{% endblock %}

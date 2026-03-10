@@ -1,0 +1,13 @@
+{% extends 'index.html' %}
+
+{% block content %}
+<h2> Es mostra llistat d'estudiant segons id </h2>
+<ul>
+    <li><b> id </b>: {{ teacher.id }}</li>
+    <li><b> name </b> : {{teacher.f_name}}</li>
+    <li><b> email </b>: {{teacher.email}}</li>
+    <li><b> department </b>: {{teacher.department}} </li>
+    <li><b> tutor/a </b>: {{teacher.is_tutor}}</li>
+</ul>
+
+{% endblock %}
