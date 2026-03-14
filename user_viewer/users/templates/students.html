@@ -6,9 +6,7 @@
     {% for student in Students %}
     <li> id: {{ student.id }}</li>
     <li> name: {{student.f_name}}</li>
-    <li> email: {{student.email}}</li>
-    <li> rol: {{student.rol}} </li>
-    <li> mitjana: {{student.mean}}</li>
+    <li><a href="{% url 'student' student.id %}"> Més info </a></li>
     </br>
     {% endfor %}
 </ul>

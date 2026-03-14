@@ -6,9 +6,7 @@
     {% for teacher in Teachers %}
     <li> id: {{ teacher.id }}</li>
     <li> name: {{teacher.f_name}}</li>
-    <li> email: {{teacher.email}}</li>
-    <li> department: {{teacher.department}} </li>
-    <li> tutor/a: {{teacher.is_tutor}}</li>
+    <li><a href="{% url 'teacher' teacher.id %}"> Més info </a></li>
     </br>
     {% endfor %}
 </ul>
